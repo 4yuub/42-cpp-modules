@@ -3,7 +3,7 @@ CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
 CC = c++
 
-SRCS = contact.cpp main.cpp
+SRCS = contact.cpp main.cpp phonebook.cpp
 OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
@@ -11,7 +11,7 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME)
 
-%.o:%.cpp contact.hpp 
+%.o:%.cpp contact.hpp phonebook.hpp
 	@$(CC) $(CFLAGS) -c $< -o $@
 	@echo "compiling..."
 

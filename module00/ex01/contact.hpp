@@ -17,6 +17,7 @@ private:
 	str darkest_secret;
 
 public:
+	Contact();
 	Contact(str f_name, str l_name, str nickname, str phone, str darkest_secret);
 	str get_first_name();
 	str get_last_name();
