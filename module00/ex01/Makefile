@@ -4,7 +4,7 @@ RM = rm -rf
 CC = c++
 
 SRCS = contact.cpp main.cpp
-OBJS = $(SRCS:.c=.o)
+OBJS = $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
