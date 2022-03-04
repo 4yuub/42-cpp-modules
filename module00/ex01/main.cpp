@@ -6,7 +6,7 @@ int main(void) {
 	PhoneBook phone_book = PhoneBook();
 	while (true) {
 		std::string cmd;
-		std::cout << "PhoneBook$ ";
+		std::cout << "\033[0;32m" << "PhoneBook$ " << "\033[0m";
 		std::getline(std::cin, cmd);
 		if (!(std::cin.good())) {
 			std::cout << "CTRL+D pressed" << std::endl;
