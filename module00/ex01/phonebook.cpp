@@ -1,4 +1,6 @@
 #include <iostream>
+#include <string>
+#include <sstream>
 #include "phonebook.hpp"
 
 PhoneBook::PhoneBook() {
@@ -8,7 +10,8 @@ PhoneBook::PhoneBook() {
 static str get_value_of(str s) {
 	str ret;
 	std::cout << s << ": ";
-	if (!(std::cin >> ret))
+	std::getline(std::cin, ret);
+	if (!(std::cin.good()))
 	{
 		std::cout << "CTRL+D pressed" << std::endl;
 		std::cout << "exiting..." << std::endl;
@@ -61,10 +64,14 @@ void PhoneBook::get_contacts_list() {
 		out_substr(contact.get_nickname());
 		std::cout << std::endl;
 	}
+	str nbr;
 	int	index;
 	std::cout << "index: ";
-	if (!(std::cin >> index)) {
-		std::cout << "CTRL+D pressed" << std::endl;
+	std::getline(std::cin, nbr);
+	std::stringstream ss;
+	ss << nbr;
+	if (!(ss >> index)) {
+		std::cout << "Bad input" << std::endl;
 		std::cout << "exiting..." << std::endl;
 		exit(0);
 	}

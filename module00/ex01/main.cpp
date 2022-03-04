@@ -7,7 +7,8 @@ int main(void) {
 	while (true) {
 		std::string cmd;
 		std::cout << "PhoneBook$ ";
-		if (!(std::cin >> cmd)) {
+		std::getline(std::cin, cmd);
+		if (!(std::cin.good())) {
 			std::cout << "CTRL+D pressed" << std::endl;
 			std::cout << "exiting..." << std::endl;
 			exit(0);
