@@ -36,7 +36,7 @@ void PhoneBook::add_contact() {
 }
 
 void PhoneBook::get_contact(int index) {
-	if (index > 7 || index >= this->nbr_of_contacts) {
+	if (index > 7 || index >= this->nbr_of_contacts || index < 0) {
 		std::cout << "IndexError: list index out of range" << std::endl;
 		return ;
 	}
