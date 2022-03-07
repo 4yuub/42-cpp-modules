@@ -32,11 +32,6 @@ void Karen::complain(str level) {
 	};
 	str levels[4] = {"debug", "info", "warning", "error"};
 	int i;
-	for (i = 0; i < 4; i++) {
-		if (levels[i] == level)
-			break;
-	}
-	if (i == 4)
-		return ;
+	for (i = 0; i < 4 && levels[i] != level; i++);
 	(this->*fs[i])();
 }

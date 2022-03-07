@@ -8,7 +8,7 @@ int main(void) {
 	karen.complain("debug");
 
 	std::cout << "Info:" << std::endl;
-	karen.complain("Info");
+	karen.complain("info");
 
 	std::cout << "Warning:" << std::endl;
 	karen.complain("warning");

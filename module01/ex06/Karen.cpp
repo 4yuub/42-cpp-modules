@@ -36,15 +36,20 @@ void Karen::complain(str level) {
 	};
 	str levels[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
 	int i;
-	for (i = 0; i < 4; i++) {
-		if (levels[i] == level)
+	for (i = 0; levels[i] != level && i < 4; i++);
+	switch(i)
+	{
+		case (0):
+			(this->*fs[i++])();
+		case (1):
+			(this->*fs[i++])();
+		case (2):
+			(this->*fs[i++])();
+		case (3):
+			(this->*fs[i++])();
+			break;
+		default:
+			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 			break;
 	}
-	if (i == 4)
-	{
-		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
-		return ;
-	}
-	for (; i < 4; i++)
-		(this->*fs[i])();
 }

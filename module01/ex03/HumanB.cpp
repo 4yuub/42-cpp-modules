@@ -2,6 +2,7 @@
 
 HumanB::HumanB(str name) {
 	this->name = name;
+	this->weapon = NULL;
 }
 
 HumanB::~HumanB() {

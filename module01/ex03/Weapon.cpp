@@ -11,7 +11,7 @@ Weapon::Weapon(str type) {
 Weapon::~Weapon() {
 }
 
-str Weapon::getType() {
+const str &Weapon::getType() {
 	return this->type;
 }
 

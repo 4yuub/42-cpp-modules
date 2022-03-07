@@ -2,6 +2,14 @@
 #include <fstream>
 #define str std::string
 
+str replace(str s1, str s2, str myStr) {
+	size_t i;
+	while ((i = myStr.find(s1)) != str::npos) {
+		myStr = myStr.substr(0, i) + s2 + myStr.substr(i + s1.length(), -1);
+	}
+	return myStr;
+}
+
 int main(int ac, char **av) {
 	// error checking:
 	if (ac != 4) {
@@ -17,23 +25,15 @@ int main(int ac, char **av) {
 		std::cerr << "can't open " << file << std::endl;
 		return 1;
 	}
+
 	// read from file into myStr:
-	str	myStr = "";
-	str	tmp;
-	if (myFile.is_open()) {
-		while (myFile.good()) {
-			std::getline(myFile, tmp);
-			myStr += tmp + "\n";
-		}
+	str	myStr;
+	if (myFile.is_open() && myFile.good()) {
+		std::getline(myFile, myStr, '\0');
 	}
 
 	// search and replace 
-	str s1(av[2]);
-	str s2(av[3]);
-	size_t i;
-	while ((i = myStr.find(s1)) != str::npos) {
-		myStr = myStr.substr(0, i) + s2 + myStr.substr(i + s2.length() + 1, -1);
-	}
+	myStr = replace(str(av[2]), str(av[3]), myStr);
 	
 	// write myStr to file...
 	std::ofstream outFile(file + ".replace");
