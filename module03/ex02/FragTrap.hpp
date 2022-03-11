@@ -22,11 +22,6 @@ class FragTrap : public ClapTrap
 		void beRepaired(unsigned int amount);
 
 		void highFivesGuys();
-	private:
-		str Name;
-		int HitPoint;
-		int EnergyPoint;
-		int AttackDamage;
 
 };
 

@@ -20,7 +20,7 @@ class ClapTrap
 		void takeDamage(unsigned int amount);
 		void beRepaired(unsigned int amount);
 
-	private:
+	protected:
 		str Name;
 		int HitPoint;
 		int EnergyPoint;

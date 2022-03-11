@@ -20,11 +20,6 @@ class ScavTrap : public ClapTrap
 		void beRepaired(unsigned int amount);
 
 		void guardGate();
-	private:
-		str Name;
-		int HitPoint;
-		int EnergyPoint;
-		int AttackDamage;
 };
 
 #endif /* ******************************************************** SCAVTRAP_H */
