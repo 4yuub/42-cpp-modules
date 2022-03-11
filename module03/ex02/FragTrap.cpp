@@ -7,17 +7,17 @@
 FragTrap::FragTrap() {
 	std::cout << "FragTrap: Default constructor called" << std::endl;
 	this->Name = "";
-	this->HitPoint = 10;
-	this->EnergyPoint = 10;
-	this->AttackDamage = 0;
+	this->HitPoint = 100;
+	this->EnergyPoint = 100;
+	this->AttackDamage = 30;
 }
 
 FragTrap::FragTrap(str Name) {
 	std::cout << "FragTrap: Constructor called" << std::endl;
 	this->Name = Name;
-	this->HitPoint = 10;
-	this->EnergyPoint = 10;
-	this->AttackDamage = 0;
+	this->HitPoint = 100;
+	this->EnergyPoint = 100;
+	this->AttackDamage = 30;
 }
 
 FragTrap::FragTrap( const FragTrap & src ) {
