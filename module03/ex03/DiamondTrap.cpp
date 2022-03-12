@@ -40,8 +40,6 @@ DiamondTrap::~DiamondTrap() {
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-
-// solve problem later
 DiamondTrap & DiamondTrap::operator=( DiamondTrap const & obj ) {
 	if ( this != &obj ) {
 		this->Name = obj.Name;
