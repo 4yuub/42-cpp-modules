@@ -18,8 +18,6 @@ class FragTrap : public ClapTrap
 		FragTrap &		operator=( FragTrap const & obj );
 
 		void attack(const str& target);
-		void takeDamage(unsigned int amount);
-		void beRepaired(unsigned int amount);
 
 		void highFivesGuys();
 
