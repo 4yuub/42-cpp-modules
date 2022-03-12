@@ -18,8 +18,6 @@ class FragTrap : virtual public ClapTrap
 		FragTrap &		operator=( FragTrap const & obj );
 
 		virtual void attack(const str& target);
-		virtual void takeDamage(unsigned int amount);
-		virtual void beRepaired(unsigned int amount);
 
 		void highFivesGuys();
 

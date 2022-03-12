@@ -68,23 +68,4 @@ void FragTrap::attack(const str& target) {
 	}
 }
 
-void FragTrap::takeDamage(unsigned int amount) {
-	if (this->HitPoint > 0 && this->EnergyPoint > 0) {
-		std::cout << "FragTrap " << this->Name << " lost " << amount;
-		std::cout << " points!" << std::endl;
-		this->HitPoint -= amount;
-		if (this->HitPoint < 0)
-			this->HitPoint = 0;
-	}
-}
-
-void FragTrap::beRepaired(unsigned int amount) {
-	if (this->EnergyPoint > 0 && this->HitPoint > 0) {
-		std::cout << "FragTrap " << this->Name << " got " << amount;
-		std::cout << " points of damage!" << std::endl;
-		this->HitPoint += amount;
-		this->EnergyPoint--;
-	}
-}
-
 /* ************************************************************************** */
