@@ -14,4 +14,8 @@ int main(void) {
     for (int i = 0; i < N; i++) {
         delete animals[i];
     }
+
+    // copy test:
+    Dog dog;
+    Dog tmp = dog;
 }

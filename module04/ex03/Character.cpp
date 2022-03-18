@@ -33,6 +33,9 @@ Character::~Character() {
 
 Character &				Character::operator=( Character const & obj ) {
 	this->name = obj.getName();
+	this->i = obj.i;
+	for (int j = 0; j < i; j++)
+		this->slot[j] = obj.slot[j];
 	return *this;
 }
 

@@ -32,6 +32,7 @@ Cat::~Cat() {
 Cat &				Cat::operator=( Cat const & obj )
 {
 	this->setType(obj.getType());
+	this->brain = new Brain(*obj.brain);
 	return *this;
 }
 

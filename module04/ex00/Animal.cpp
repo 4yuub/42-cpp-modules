@@ -5,6 +5,7 @@
 */
 
 Animal::Animal() {
+	std::cout << "Animal constructor called" << std::endl;
 	this->setType("None");
 }
 
@@ -18,6 +19,7 @@ Animal::Animal( Animal const & src ) {
 */
 
 Animal::~Animal() {
+	std::cout << "Animal Destructor called" << std::endl;
 }
 
 

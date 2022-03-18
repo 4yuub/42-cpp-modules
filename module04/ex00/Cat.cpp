@@ -5,6 +5,7 @@
 */
 
 Cat::Cat() {
+	std::cout << "Cat constructor called" << std::endl;
 	this->setType("Cat");
 }
 
@@ -18,6 +19,7 @@ Cat::Cat( const Cat & src ):Animal(src) {
 */
 
 Cat::~Cat() {
+	std::cout << "Cat destructor called" << std::endl;
 }
 
 
