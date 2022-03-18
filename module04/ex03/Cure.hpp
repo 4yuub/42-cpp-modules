@@ -12,9 +12,9 @@ class Cure : public AMateria
 		Cure();	
 		Cure( Cure const & src );
 		~Cure();
-		Cure* clone() const override;
+		Cure* clone() const;
 		Cure &		operator=( Cure const & obj );
-		void use(ICharacter& target) override;
+		void use(ICharacter& target);
 	private:
 
 };

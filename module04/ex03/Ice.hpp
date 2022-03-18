@@ -12,9 +12,9 @@ class Ice : public AMateria
 		Ice();	
 		Ice( Ice const & src );
 		~Ice();
-		Ice* clone() const override;
+		Ice* clone() const;
 		Ice &		operator=( Ice const & obj );
-		void use(ICharacter& target) override;
+		void use(ICharacter& target);
 	private:
 
 };

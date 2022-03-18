@@ -12,8 +12,8 @@ class MateriaSource : public IMateriaSource
 		MateriaSource();
 		MateriaSource( MateriaSource const & src );
 		~MateriaSource();
-		void learnMateria(AMateria*) override;
-		AMateria* createMateria(std::string const & type) override;
+		void learnMateria(AMateria*);
+		AMateria* createMateria(std::string const & type);
 		MateriaSource &		operator=( MateriaSource const & rhs );
 
 	private:
