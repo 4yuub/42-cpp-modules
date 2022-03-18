@@ -19,6 +19,9 @@ MateriaSource::MateriaSource( const MateriaSource & src ) {
 */
 
 MateriaSource::~MateriaSource() {
+	for (int i = 0; i < this->nbr; i++) {
+		delete materias[i];
+	}
 }
 
 
@@ -54,9 +57,7 @@ AMateria* MateriaSource::createMateria(std::string const & type) {
 		if (type == this->materias[i]->getType())
 			break;
 	}
-	if (this->materias[i]->getType() == "ice")
-		return new Ice();
-	return new Cure();
+	return this->materias[i];
 }
 
 /* ************************************************************************** */
