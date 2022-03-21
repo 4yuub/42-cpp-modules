@@ -32,7 +32,7 @@ class Form {
                 const char *what() const throw();
         };
     private:
-        std::string Name;
+        std::string const Name;
         bool        IsSigned;
         const int   GradeToSign;
         const int   GradeToExecute;

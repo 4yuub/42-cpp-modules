@@ -5,21 +5,19 @@
  * 
  */
 
-Form::Form():GradeToSign(1), GradeToExecute(1) {
-    this->Name = "none";
+Form::Form():Name("none"), GradeToSign(1), GradeToExecute(1) {
     this->IsSigned = false;
 }
 
-Form::Form(std::string Name, int Sing, int Execute):GradeToSign(Sing), GradeToExecute(Execute) {
+Form::Form(std::string Name, int Sing, int Execute):Name(Name), GradeToSign(Sing), GradeToExecute(Execute) {
     if (this->GradeToSign < HIGHEST || this->GradeToExecute < HIGHEST)
         throw Form::GradeTooHighException();
     if (this->GradeToSign > LOWEST || this->GradeToExecute > LOWEST)
         throw  Form::GradeTooLowException();
-    this->Name = Name;
     this->IsSigned = false;
 }
 
-Form::Form(Form const & src):GradeToSign(src.GradeToSign), GradeToExecute(src.GradeToExecute) {
+Form::Form(Form const & src):Name(src.Name), GradeToSign(src.GradeToSign), GradeToExecute(src.GradeToExecute) {
     *this = src;
 }
 
@@ -71,7 +69,6 @@ Form & Form::operator=(Form const & obj) {
         throw Form::GradeTooHighException();
     if (this->GradeToSign > LOWEST || this->GradeToExecute > LOWEST)
         throw  Form::GradeTooLowException();
-    this->Name = obj.Name;
     this->IsSigned = obj.IsSigned;
     return *this;
 }

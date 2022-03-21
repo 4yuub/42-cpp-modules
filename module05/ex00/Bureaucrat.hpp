@@ -28,7 +28,7 @@ class Bureaucrat {
                 const char *what() const throw();
         };
     private:
-        std::string Name;
+        std::string const Name;
         int         Grade;
 };
 

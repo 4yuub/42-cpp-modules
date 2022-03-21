@@ -5,18 +5,16 @@
  * 
  */
 
-Bureaucrat::Bureaucrat() {
-    this->Name = "none";
+Bureaucrat::Bureaucrat():Name("none") {
     this->Grade = LOWEST;
 }
 
-Bureaucrat::Bureaucrat(std::string Name, int Grade) {
+Bureaucrat::Bureaucrat(std::string Name, int Grade):Name(Name) {
     if (Grade < HIGHEST)
         throw Bureaucrat::GradeTooHighException();
     if (Grade > LOWEST)
         throw  Bureaucrat::GradeTooLowException();
     this->Grade = Grade;
-    this->Name = Name;
 }
 
 Bureaucrat::Bureaucrat(Bureaucrat const & src) {
@@ -40,7 +38,6 @@ Bureaucrat & Bureaucrat::operator=(Bureaucrat const & obj) {
     if (obj.Grade > LOWEST)
         throw  Bureaucrat::GradeTooLowException();
     this->Grade = obj.Grade;
-    this->Name = obj.Name;
     return *this;
 }
 
