@@ -8,6 +8,9 @@ template <typename T>
 Array<T>::Array(unsigned int size) {
     m_size = size;
     m_array = new T[size];
+    for (unsigned int i = 0; i < m_size; i++) {
+        m_array[i] = 0;
+    }
 }
 
 template <typename T>
