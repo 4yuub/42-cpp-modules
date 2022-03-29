@@ -9,7 +9,8 @@ static bool is_valid(std::string &s) {
         return true;
     }
 
-    for (char c : s) {
+    for (size_t i = 0; i < s.size(); i++) {
+        char c = s[i];
         if (!isdigit(c) && c != '+' && c != '-' && c != 'f' && c != '.')
             return false;
     }
