@@ -43,7 +43,7 @@ void ShrubberyCreationForm::action() const {
     // draw ascii tree:
     std::ofstream outFile(this->Target + "_shrubbery");
     if (!outFile) {
-        std::cerr << "can't open/create" << this->Target + "" << std::endl;
+        std::cerr << "can't open/create" << this->Target + "_shrubbery" << std::endl;
         return ;
     }
     outFile << 
@@ -57,7 +57,7 @@ void ShrubberyCreationForm::action() const {
     "                \\ }{\n"
     "                }}{\n"
     "                }}{\n"
-    "            ejm  {{}\n"
+    "        akarafi {{}\n"
     "        , -=-~{ .-^- _\n"
     "                `}\n"
     "                 {"
